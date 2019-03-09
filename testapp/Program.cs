@@ -6,6 +6,7 @@ namespace Testapp {
             Console.WriteLine("Console writeLine test");
             Console.WriteLine("Moar lines");
             Console.ReadKey();
+            var u = "test";
         }
     }
 }
