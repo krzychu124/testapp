@@ -1,0 +1,7 @@
+language: csharp
+solution: "testapp.sln"
+branches:
+  only:
+    - master
+notifications:
+  - email: false 
