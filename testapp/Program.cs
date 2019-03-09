@@ -8,6 +8,7 @@ namespace Testapp {
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Console writeLine test");
+            Console.WriteLine("Moar lines");
             Console.ReadKey();
         }
     }
