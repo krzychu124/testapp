@@ -1,5 +1,7 @@
 language: csharp
 solution: "testapp.sln"
+script:
+  - msbuild /p:Configuration=Release /p:TreatWarningsAsErrors="true" testapp.sln 
 branches:
   only:
     - master
