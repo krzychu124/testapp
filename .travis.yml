@@ -1,7 +1,7 @@
 language: csharp
 solution: "testapp.sln"
 before_install:
-  - cd /tmp && curl -O $DEPENDENCIES_URL 
+  - cd /tmp && curl -L -o Managed.tar.gz $DEPENDENCIES_URL 
   - mkdir -p /home/travis/build/krzychu124/testapp/managed && tar -xzf /tmp/Managed.tar.gz -C /home/travis/build/krzychu124/testapp/managed
 script:
   - msbuild /p:Configuration=Release /p:TreatWarningsAsErrors="true" /p:PostBuildEvent= testapp.sln 
