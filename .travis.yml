@@ -2,7 +2,7 @@ language: csharp
 solution: "testapp.sln"
 before_install:
   - wget -nv $DEPENDENCIES_URL -O /tmp/Managed.tar.gz
-  - mkdir -p /home/travis/build/krzychu124/testapp/managed && tar -xzvf /tmp/Managed.tar.gz -C /home/travis/build/krzychu124/testapp/managed
+  - mkdir -p /home/travis/build/krzychu124/testapp/managed && tar -xzf /tmp/Managed.tar.gz -C /home/travis/build/krzychu124/testapp/managed
 script:
   - msbuild /p:Configuration=Release /p:TreatWarningsAsErrors="true" /p:PostBuildEvent= testapp.sln 
 branches:
