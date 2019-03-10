@@ -1,5 +1,9 @@
 language: csharp
 solution: "testapp.sln"
+before_install:
+  - wget https://www.dropbox.com/s/9b8rzmr27yv474b/Managed.tar.gz?dl=1 -O /tmp/Managed.tar.gz
+  - tar -xzvf /tmp/Managed.tar.gz
+  - ls -a
 script:
   - msbuild /p:Configuration=Release /p:TreatWarningsAsErrors="true" testapp.sln 
 branches:
